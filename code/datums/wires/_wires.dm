@@ -87,8 +87,9 @@
 	"crimson",
 	"cyan",
 	"gold",
-	"grey",
 	"green",
+	"grey",
+	"lime",
 	"magenta",
 	"orange",
 	"pink",
@@ -97,7 +98,7 @@
 	"silver",
 	"violet",
 	"white",
-	"yellow"
+	"yellow",
 	)
 
 	var/list/my_possible_colors = possible_colors.Copy()
@@ -110,7 +111,7 @@
 	randomize()
 
 /datum/wires/proc/repair()
-	cut_wires.Cut()
+	cut_wires.Cut()//a negative times a negative equals a positive
 
 /datum/wires/proc/get_wire(color)
 	return colors[color]
