@@ -56,7 +56,7 @@
 	weight = 5
 	cost = STATION_TRAIT_COST_LOW
 	show_in_report = TRUE
-	report_message = "It seems collectors in this system are extra keen to on bounties, and will pay more to see their completion."
+	report_message = "It seems collectors in this system are extra keen on bounties and will pay more to see their completion."
 
 /datum/station_trait/bountiful_bounties/on_round_start()
 	SSeconomy.bounty_modifier *= 1.2
@@ -112,7 +112,7 @@
 	. = ..()
 	deathrattle_group = new("[department_name] group")
 	blacklist += subtypesof(/datum/station_trait/deathrattle_department) - type //All but ourselves
-	report_message = "All members of [department_name] have received an implant to notify each other if one of them dies. This should help improve job-safety!"
+	report_message = "All members of [department_name] have received an implant to notify each other if one of them dies. This should help improve job safety!"
 	RegisterSignal(SSdcs, COMSIG_GLOB_JOB_AFTER_SPAWN, PROC_REF(on_job_after_spawn))
 
 
@@ -174,7 +174,7 @@
 	trait_type = STATION_TRAIT_POSITIVE
 	show_in_report = TRUE
 	weight = 1
-	report_message = "All members of the station have received an implant to notify each other if one of them dies. This should help improve job-safety!"
+	report_message = "All members of the station have received an implant to notify each other if one of them dies. This should help improve job safety!"
 	var/datum/deathrattle_group/deathrattle_group
 
 /datum/station_trait/deathrattle_all/New()
@@ -276,7 +276,7 @@
 
 /datum/station_trait/random_event_weight_modifier/shuttle_loans
 	name = "Loaner Shuttle"
-	report_message = "Due to an uptick in pirate attacks around your sector, there are few supply vessels in nearby space willing to assist with special requests. Expect to receive more shuttle loan opportunities, with slightly higher payouts."
+	report_message = "Due to an uptick in pirate attacks around your sector, there are few supply vessels in nearby space willing to assist with special requests. Expect to receive more shuttle loan opportunities with slightly higher payouts."
 	trait_type = STATION_TRAIT_POSITIVE
 	weight = 4
 	event_control_path = /datum/round_event_control/shuttle_loan
